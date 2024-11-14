@@ -1,27 +1,43 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="navbar">
-  <img>
-  <div>
-    <p>My Lists</p>
-    <p>New list</p>
-  </div>
-</div>
+<div class="page">
 
-<div class="banniere">
-
-<h1>Save any kind of movie</h1>
-
-</div>
-
-<div class="containlist">
-  <% @lists.each do |list| %>
-  <div class="lists">
-    <%= render list %>
-    <p>
-      <%= link_to "Show this list", list %>
-    </p>
+  <div class="navbar">
+    <img src="file:///Users/jeromeanciaux/code/Jeskaa-dev/rails-watch-list/app/assets/images/picto-cinema.png" class="picto-navbar">
+    <div class="navbar-btns">
+      <div class="navbar-btn">My Lists</div>
+      <div class="navbar-btn">New list</div>
     </div>
-  <% end %>
-  <div class="btn"><%= link_to "Add a new list", new_list_path %></div>
+  </div>
+
+  <div class="banniere">
+    <h1>Save any kind of movie</h1>
+  </div>
+
+  <div class="mylists">
+    <h2>What to watch</h2>
+    <div class="addlist">
+      <p>Add a list</p>
+      <%= link_to new_list_path do %>
+      <i class="fa-solid fa-plus"></i>
+      <% end %>
+    </div>
+
+    <%# <div class="navbar-btn"></div> %>
+  </div>
+
+  <div class="containlist">
+    <% @lists.each do |list| %>
+    <div class="lists">
+      <%= render list %>
+      <%= link_to list do%>
+      <div class="showlist-btn">Show this list</div>
+     <% end %>
+
+
+      </div>
+    <% end %>
+
+  </div>
+
 </div>
