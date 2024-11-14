@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="bookmarks">
+  <% @bookmarks.each do |bookmark| %>
+    <div class="vignette">
+    <img src=<%= bookmark.movie.poster_url %>>
+    </div>
+    <%= bookmark.movie.title %>
+    <%= bookmark.movie.overview %>
+    <%= bookmark.comment %>
+  <% end %>
+</div>
+
+<div>
+  <%= link_to "Add a movie", new_list_bookmark_path(@list) %> |
+
+  <%= link_to "Back to lists", lists_path %>
+
+  <%= button_to "Destroy this list", @list, method: :delete %>
+</div>
+
+<%# ici afficher la liste des films ,des avis ainsi qu'un noubton pour ajouter un film et un bouton pour ajouter un avis %>

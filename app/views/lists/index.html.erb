@@ -1,0 +1,27 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="navbar">
+  <img>
+  <div>
+    <p>My Lists</p>
+    <p>New list</p>
+  </div>
+</div>
+
+<div class="banniere">
+
+<h1>Save any kind of movie</h1>
+
+</div>
+
+<div class="containlist">
+  <% @lists.each do |list| %>
+  <div class="lists">
+    <%= render list %>
+    <p>
+      <%= link_to "Show this list", list %>
+    </p>
+    </div>
+  <% end %>
+  <div class="btn"><%= link_to "Add a new list", new_list_path %></div>
+</div>

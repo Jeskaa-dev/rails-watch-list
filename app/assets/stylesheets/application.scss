@@ -10,3 +10,73 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+body{
+  background-color: rgb(226, 226, 226);
+  font-family: Arial, Helvetica, sans-serif;
+  }
+
+.navbar{
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  height: 50px;
+  width: 100wh;
+}
+
+
+.banniere{
+  text-align:center;
+  display:flex;
+  padding:auto;
+  background-image: linear-gradient(#000000, transparent), url("https://www.toulouseforyou.com/wp-content/uploads/2022/11/pexels-tima-miroshnichenko-7991579-1280x800.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 500px;
+  width: 100wh;
+  box-shadow: 0 0 10px rgb(52, 52, 52);
+}
+
+.banniere h1{
+color: white;
+vertical-align:middle;
+}
+
+.lists{
+  margin: 20px;
+  height: 100px;
+  width: 250px;
+  box-shadow: 0 0 10px rgb(52, 52, 52);
+}
+
+.containlist{
+  display : flex;
+  margin: 30px;
+  padding : 30px;
+}
+
+.btn{
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(12, 101, 71);
+  border : 1px solid rgba(127, 255, 212, 0.631);
+  height: 40px;
+  width:fit-content ;
+}
+
+.btn:hover{
+  background-color: rgb(27, 162, 117);
+
+}
+
+.bookmarks{
+  height: 300px;
+  width: 600px;
+  box-shadow: 0 0 10px black;
+}
+
+.vignette{
+
+}
